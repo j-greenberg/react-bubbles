@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
@@ -47,7 +47,7 @@ const Login = () => {
         <label>Password: </label>
         <input type="text" name="password" value={body.password} onChange={handleChange}/>
         <button onClick={handleSubmit}>LOGIN</button>
-        {status.loggedIn ? `You are now logged in! Redirecting... ` : "You are currently logged out"}
+        {status.loggedIn ? `You are logged in! Redirecting... ` : "You are currently logged out" }
       </form>
     </div>
   );
